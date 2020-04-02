@@ -16,7 +16,7 @@ sudo apt update -y
 sudo apt install -y python3-pip apache2 libapache2-mod-wsgi-py3
 ```
 2. Clone the project in an allowed directory by `/etc/apache2/apache2.conf`
-3. Choose between sqlite3 or your custom database in `/django-portfolio/core/settings.py`
+3. Choose between sqlite3 or your custom database in `/core/core/settings.py`
 ```python
 DATABASES = {
     'default': {
@@ -41,11 +41,11 @@ DATABASES = {
 ```
 4. Migrate the database
 ```sh
-cd /var/www/vhosts/django-portfolio
+cd /var/www/vhosts/core
 sudo pip3 install -r requirements.txt
 sudo python3 manage.py migrate
 ```
-5. Set these parameters in `/django-portfolio/core/production.py`
+5. Set these parameters in `/core/core/production.py`
 ```python
 DEBUG = False
 # if your database engine is MySQL, otherwise leave these empty
@@ -60,12 +60,12 @@ ALLOWED_HOSTS = ['portfolio.richardinfo.fr']
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 
-STATIC_ROOT = '/var/www/vhosts/django-portfolio/static'
-MEDIA_ROOT = '/var/www/vhosts/django-portfolio/media'
+STATIC_ROOT = '/var/www/vhosts/core/static'
+MEDIA_ROOT = '/var/www/vhosts/core/media'
 ```
 6. Collect static files
 ```sh
-cd /var/www/vhosts/django-portfolio
+cd /var/www/vhosts/core
 sudo python3 manage.py collectstatic
 ```
 7. Set the virtualhost for apache2
@@ -83,18 +83,18 @@ sudo service apache2 reload
 <VirtualHost *:80>
         ServerName portfolio.richardinfo.fr
         ServerAdmin arthur.richard2299@gmail.com
-        DocumentRoot /var/www/vhosts/django-portfolio
+        DocumentRoot /var/www/vhosts/core
 
-        Alias /favicon.ico /var/www/vhosts/django-portfolio/static/images/favicon.ico
+        Alias /favicon.ico /var/www/vhosts/core/static/images/favicon.ico
 
-        Alias /static /var/www/vhosts/django-portfolio/static
-        <Directory /var/www/vhosts/django-portfolio/static>
+        Alias /static /var/www/vhosts/core/static
+        <Directory /var/www/vhosts/core/static>
                 Options FollowSymLinks
                 Require all granted
         </Directory>
 
-        Alias /media /var/www/vhosts/django-portfolio/media
-        <Directory /var/www/vhosts/django-portfolio/media>
+        Alias /media /var/www/vhosts/core/media
+        <Directory /var/www/vhosts/core/media>
                 Options FollowSymLinks
                 Require all granted
         </Directory>
@@ -103,9 +103,9 @@ sudo service apache2 reload
 
         WSGIDaemonProcess portfolio.richardinfo.fr processes=2 threads=15
         WSGIProcessGroup portfolio.richardinfo.fr
-        WSGIScriptAlias / /var/www/vhosts/django-portfolio/core/wsgi.py
+        WSGIScriptAlias / /var/www/vhosts/core/core/wsgi.py
 
-        <Directory /var/www/vhosts/django-portfolio/core>
+        <Directory /var/www/vhosts/core/core>
                 <Files wsgi.py>
                         Require all granted
                 </Files>
