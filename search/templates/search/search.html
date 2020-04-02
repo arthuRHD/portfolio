@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %} {% load static %} {% block content %} {% if articles_search.count > 0 %} {% for item in articles_search %}
+<div class="card shadow">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="{{ item.thumbnail.url }}" class="card-img" alt={{item.title}}>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <small class="text-muted">{{ item.date }}</small>
+                <h3 class="card-title">{{item.title}}</h3>
+                <span class="badge badge-primary">{{item.theme}}</span>
+                </hr>
+                <p class="card-text">{{item.desc}}</p>
+                <a class="btn btn-sm btn-success" href="/veille/{{item.id}}">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+</br>
+{% endfor %} {% else %}
+<br>
+<div class="alert alert-dismissable alert-danger shadow">Désolé, nous n'avons rien trouvé</div>
+{% endif %} {% endblock %}

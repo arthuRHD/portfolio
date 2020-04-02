@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %} {% load static %} {% block content %}
+<h4 class="display-3">Intégration Continue</h4>
+<hr>
+<ul class="nav nav-pills mb-3 position-sticky" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-def-tab" data-toggle="pill" href="#pills-def" role="tab" aria-controls="pills-home" aria-selected="false">Definition</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-interet-tab" data-toggle="pill" href="#pills-interet" role="tab" aria-controls="pills-interet" aria-selected="false">Intérêt pour les entreprises</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tools-tab" data-toggle="pill" href="#pills-tools" role="tab" aria-controls="pills-tools" aria-selected="false">Présentation d'outils de CI</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-veille-tab" data-toggle="pill" href="#pills-veille" role="tab" aria-controls="pills-veille" aria-selected="false">Outils de veille</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-project-tab" data-toggle="pill" href="#pills-project" role="tab" aria-controls="pills-project" aria-selected="false">Projets</a>
+    </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-def" role="tabpanel" aria-labelledby="pills-def-tab">
+        <h4 class="text-monospace">Définition</h4> <br>
+        <p class="text-justify">L'intégration continue (CI) permet aux développeurs de fusionner plus fréquemment leurs modifications de code dans une « branche » partagée, ou un « tronc », parfois même tous les jours. Une fois que les modifications apportées par un développeur
+            sont fusionnées, elles sont validées par la création automatique de l'application et l'exécution de différents niveaux de test automatisés (généralement des tests unitaires et d'intégration) qui permettent de vérifier que les modifications
+            n'entraînent pas de dysfonctionnement au sein de l'application.</p>
+
+        <p class="text-justify">En d'autres termes, il s'agit de tester absolument tout, des classes et fonctions jusqu'aux différents modules qui constituent l'application. En cas de détection d'un conflit entre le code existant et le nouveau code, le processus d'intégration
+            continue permet de résoudre les dysfonctionnements plus facilement, plus rapidement et plus fréquemment.</p>
+        <h4 class="text-monospace">Dans la pratique</h4>
+        <h1 class="lead"> Ici, deux scénarios sont possibles : </h1>
+        <ol>
+            <li> Le code est validé selon les critères voulus et donc prêt à passer à la phase de build</li>
+            <li> Le code contient une erreur qui est généralement retourné par le gestionnaire de version, empêchant la contribution d’accéder à la prochaine phase.</li>
+        </ol>
+        <img src="{% static 'images/ci_schema.png' %}" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="tab-pane fade" id="pills-interet" role="tabpanel" aria-labelledby="pills-interet-tab">
+        <h4 class="text-monospace">Intérêt pour les entreprises</h4> <br>
+        <p class="text-justify">Les valeurs ajoutées de l’Intégration Continue pour les entreprises de logicielles sont multiples. Tout d’abord il y a l’argument de la qualité qui est indéniable auprès des clients, mais aussi l’efficacité engendré par cette architecture car
+            cela permet d’éviter de déployer des versions de logicielles contenant des erreurs, mais aussi de faciliter la relecture de code puisqu’elle est effectuée automatiquement (selon les paramètres de l’intégration continue).</p>
+        <p class="text-justify">Certes, la mise en place de cette architecture prend du temps, mais c’est un sacrifice nécessaire afin de suivre les bonnes pratiques et de profiter des avantages au long terme de l’Intégration Continue. Enfin, plus il y a de développeurs dans
+            l’entreprise, plus les avantages de l’intégration continue sont notables.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">...</div>
+    <div class="tab-pane fade" id="pills-veille" role="tabpanel" aria-labelledby="pills-veille-tab">
+        <h4 class="text-monospace">Outils de veille utilisés</h4> <br>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Google actualités avec une recherche portant sur les 3 premières pages</li>
+            <li class="list-group-item">Twitter avec #devops #ContinuousIntegration #CI </li>
+            <li class="list-group-item">Youtube avec la recherche avancée</li>
+            <li class="list-group-item">Google alertes en choisissant l’article le plus pertinent de tous les articles retournés</li>
+        </ul>
+        <br>
+        <h4 class="text-monospace">Ma démarche</h4> <br>
+        <p class="text-justify col-6">Ma veille technologique contient des articles, mais aussi des vidéos et des guides contenant des explications qui m’ont permis de mieux comprendre le concept, mais aussi de commencer à intégrer cette pratique au sein de mes projets afin d’apprécier
+            les avantages et les inconvénients de l’Intégration continue.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">
+        ...
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% block content %}
+{% if articles_list %}
+    <article class="col-md-7 maincontent">
+      <div class="card shadow">
+        <div class="card-body">
+            <h3 class="card-title display-4">Listes de articles</h3>
+          <div class="list-group">
+          {% for article in articles_list %}
+              <a class="list-group-item d-flex align-items-center justify-content-between list-group-item-action" href="{{ article.id }}/">{{ article.title }}
+                <span class="badge badge-primary badge-pill">{{ article.theme }} | {{ article.date }}</span>
+              </a>
+          {% endfor %}
+          </div>
+        </div>
+      </div>    
+    </article>
+    	
+{% else %}
+<br>
+    <p class="alert alert-danger alert-dismissable shadow">Il n'y a pas d'articles disponibles.</p>
+{% endif %}
+{% endblock %}

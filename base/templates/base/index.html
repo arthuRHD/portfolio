@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    {% if is_paginated %}
+  <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+<div class="row row-cols-3 row-cols-md-1">
+    {% for article in articles %}
+
+      <div class="col mb-4">
+        <div class="card shadow">
+            <img style="width: 100%" src="{{article.thumbnail.url}}" class="card-img-top" alt="{{article.title}}">
+            <div class="card-body">
+                <p class="card-text"><small class="text-muted">{{article.date}}</small> <span class="badge badge-pill badge-warning">{{article.theme}}</span></p> 
+                <h5 class="card-title">{{article.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{article.desc}}</h6>
+                <a class="card-link btn btn-sm btn-success" href="/veille/{{article.id}}">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+  {% endfor %}
+      </div>
+
+{% endblock content %}

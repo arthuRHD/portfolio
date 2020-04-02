@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %} {% load crispy_forms_tags %} {% block title %} Contactez-moi {% endblock %} {% block script %}
+<script>
+    function enableBtn() {
+        document.getElementById("button1").disabled = false;
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock%} {% block content %}
+<header class="page-header">
+    <h1 class="display-4 page-title">Veuillez remplir ce formulaire</h1>
+    <form method="post">
+        {% csrf_token %} {{ form|crispy }}
+        <input class="btn btn-outline-dark" type="submit" value="Envoyer le mail" id="button1" disabled>
+    </form>
+    <div class="g-recaptcha" data-sitekey="6LcTBN8UAAAAAETA44QKDkZVGVGhSO_BexhELLQz" data-callback="enableBtn"></div>
+    {% endblock %}

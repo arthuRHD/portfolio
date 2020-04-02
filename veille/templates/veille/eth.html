@@ -1,0 +1,89 @@
+{% extends 'base/base.html' %} {% load static %} {% block content %}
+<h4 class="display-3">Ethereum</h4>
+<hr>
+<ul class="nav nav-pills mb-3 position-sticky" id="pills-tab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="pills-def-tab" data-toggle="pill" href="#pills-def" role="tab" aria-controls="pills-home" aria-selected="false">Definition</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-interet-tab" data-toggle="pill" href="#pills-interet" role="tab" aria-controls="pills-interet" aria-selected="false">Intérêt pour les entreprises</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-tools-tab" data-toggle="pill" href="#pills-tools" role="tab" aria-controls="pills-tools" aria-selected="false">Technologies autour d'Ethereum</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-veille-tab" data-toggle="pill" href="#pills-veille" role="tab" aria-controls="pills-veille" aria-selected="false">Outils de veille</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="pills-project-tab" data-toggle="pill" href="#pills-project" role="tab" aria-controls="pills-project" aria-selected="false">Projets</a>
+    </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-def" role="tabpanel" aria-labelledby="pills-def-tab">
+        <h4 class="text-monospace">Définition</h4> <br>
+        <p class="text-justify">En une phrase, Ethereum est : un ordinateur mondial, que n’importe qui peut programmer et utiliser comme il le souhaite. Cet ordinateur est toujours allumé, il est très sécurisé, et tout ce qui est fait à l’aide de cet ordinateur est public.
+        </p>
+        <p class="text-justify">La technologie derrière Ethereum est grosso modo la même que celle utilisée par le bitcoin : il s’agit d’ordinateurs individuels qui « participent » à une unique base de données globale publique, et donc partagée entre tous. Un livre de comptes,
+            ou un tableur géant dans lequel chaque personne intéressée entre les données qu’il souhaite et auquel tout le monde a accès. Ce livre de compte est appelé “Blockchain”.
+        </p>
+        <p class="text-justify">La blockchain de l'Ethereum concerne le déploiement d'applications décentralisées, ce qui représente un secteur innovant à fort potentiel. Pour plus d'informations, je vous invite à consulter <a href="http://www.pearltrees.com/mikrobass/ethereum/id25036594#item257362764">cet article</a>            sur Pearltrees.</p>
+        <p class="text-justify">Cette veille ne porte pas uniquement sur l'explication du concept de Blockchain. J'ai choisi ce thème dans le but d'étudier l'aspect logiciel de la création de contrats intelligents. En effet, les blockchains existent déjà dans la vie de tous
+            les jours comme par exemple Git qui hash ses commits en tenant compte des commits précédent. Le fonctionnement des transactions d'ether est complexe. En étudiant les smarts contracts qui sont à l'origine DApps (Decentralized application),
+            on peut mieux visualiser le processus de transaction.</p>
+        <h1 class="lead text-center">Voici un exemple de processus de développement d'un smart contract</h1>
+        <div class="text-center">
+            <img src="{% static 'images/eth_schema.png' %}" class="img-fluid align-content-center" alt="Responsive image">
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-interet" role="tabpanel" aria-labelledby="pills-interet-tab">
+        <h4 class="text-monospace">Intérêt pour les entreprises</h4> <br>
+        <p class="text-justify">Les registres blockchain sont également très utilisés dans le cadre du déploiement de smart contracts et de DApps (ou applications décentralisées). L’utilisation des smart contracts (contrats intelligents) permet de rendre possible la tenue des
+            registres et l’automatisation d’actions via des programmes autonomes. Le but est ici généralement de : </p>
+        <blockquote class="blockquote text-right">
+            <span class="mb-0 font-weight-bold">Diminuer les coûts</span>
+            <footer class="blockquote-footer">liés à la présence d’acteurs intermédiaires au sein d’un process de transaction.</footer>
+        </blockquote>
+        <br><br>
+        <blockquote class="blockquote">
+            <p class="mb-0 font-weight-bold">Sécuriser les transactions</p>
+            <footer class="blockquote-footer">à l’aide d’un contrat établi sur la base de conditions strictes : si ces conditions ne sont pas remplies, le programme ne s’exécute pas.</footer>
+        </blockquote>
+        <br><br>
+        <blockquote class="blockquote text-right">
+            <p class="mb-0 font-weight-bold">Améliorer la transparence</p>
+            <footer class="blockquote-footer">des réseaux en rendant l’information 100% accessible.</footer>
+        </blockquote>
+        <br><br>
+        <blockquote class="blockquote">
+            <p class="mb-0 font-weight-bold">Innover</p>
+            <footer class="blockquote-footer">tout en définissant un nouveau mode de gouvernance jugé plus juste et plus éthique.</footer>
+        </blockquote>
+    </div>
+    <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">
+        <h4 class="text-monospace">Outils de développement de smart contracts</h4><br>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://github.com/ethereum/solidity">Solidity</a>, le langage orienté contrat (Contract-Oriented Programming)</li>
+            <li class="list-group-item"><a href="https://github.com/duaraghav8/Ethlint">Ethlint</a> , l'outil de résolution de problème de style & de sécurité pour Solidity basé sur Solium</li>
+            <li class="list-group-item"><a href="https://github.com/duaraghav8/dapp-workflow">dapp-workflow : </a>des outils pour apprendre les bonnes pratiques du développement de Smart Contracts utilisant Ganache CLI, Web3 v1, SolcJS et Solium.</li>
+            <li class="list-group-item"><a href="https://github.com/willitscale/learning-solidity">learning-solidity</a>, des tutoriels complets pour appendre Solidity tout en lisant la documentation de Solidity</li>
+            <li class="list-group-item"><a href="https://solidity.readthedocs.io/en/v0.6.3/">La documentation officielle de Solidity</a></li>
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="pills-veille" role="tabpanel" aria-labelledby="pills-veille-tab">
+        <h4 class="text-monospace">Outils de veille utilisés</h4> <br>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Google actualités avec une recherche portant sur les 3 premières pages</li>
+            <li class="list-group-item">Reddit avec <a href="https://www.reddit.com/r/ethereumnoobies/">r/ethereumnoobies/</a>, <a href="https://www.reddit.com/r/eth/">r/eth</a> & <a href="https://www.reddit.com/r/solidity/">r/solidity</a></li>
+            <li class="list-group-item">Github, avec les reviews de commits</li>
+            <li class="list-group-item">Google alertes en choisissant l’article le plus pertinent de tous les articles retournés</li>
+        </ul>
+        <br>
+        <h4 class="text-monospace">Ma démarche</h4> <br>
+        <p class="text-justify col-6">Ma veille technologique contient des articles, mais aussi des guides contenant des explications qui m’ont permis de mieux comprendre le concept, mais aussi de commencer à intégrer cette pratique au sein de mes projets afin d’apprécier les avantages
+            et les inconvénients de l’Intégration continue.</p>
+    </div>
+    <div class="tab-pane fade" id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">
+        ...
+    </div>
+</div>
+{% endblock content %}

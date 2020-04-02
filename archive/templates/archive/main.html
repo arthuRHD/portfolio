@@ -1,0 +1,225 @@
+{% extends 'base/base.html' %} {% load static %} {% block content %}
+<h1 class="display-3">Archives</h1>
+<br>
+<div class="card shadow">
+    <div class="card-header" style="padding: 11px;">
+        <ul id="pills-tab" class="nav nav-tabs card-header-tabs no-gutters position-sticky" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-skill-tab" data-toggle="pill" href="#pills-skill" role="tab" aria-controls="pills-skill" aria-selected="true">Compétences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-ppe-tab" data-toggle="pill" href="#pills-ppe" role="tab" aria-controls="pills-ppe" aria-selected="false">PPE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-stage-1-tab" data-toggle="pill" href="#pills-stage-1" role="tab" aria-controls="pills-stage-1" aria-selected="false">Stage de première année</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-stage-2-tab" data-toggle="pill" href="#pills-stage-2" role="tab" aria-controls="pills-stage-2" aria-selected="false">Stage de deuxième année</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade active show" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
+                <a class="btn-block btn btn-outline-dark" href="{% static 'ressources/btssio/BTS_SIO_excel_competences.pdf' %}" type="application/pdf" target="blank">Tableau des Compétences</a>
+                <br>
+                <a class="btn btn-primary btn sm" data-toggle="collapse" href="#skill" role="button" aria-expanded="false" aria-controls="collapseExample">⇵</a><span class="text-monospace"> Justification des compétences</span>
+                <hr>
+                <div class="collapse" id="skill">
+                    <details>
+                        <summary class="alert alert-success">Situations obligatoires</summary>
+                        <ul style="list-style: none;">
+                            <li>
+                                <details>
+                                    <summary class="alert alert-dark">Participation à un projet d’évolution d’un SI (solution applicative)</summary>
+                                    <p>J'ai eu la chance de participer à l'évolution d'un service informatique au cours de mes deux stages. (voir la section Stage de première année et de deuxième année)</p>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary class="alert alert-dark">Prise en charge d’incidents et de demandes d’assistance liés au domaine de spécialité du candidat </summary>
+                                    <p><a href="{% static 'ressources/btssio/skills/glpi.pdf' %}" target="_blank">Compte-rendu d'installation du service GLPI et de OCS Inventory</a></p>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary class="alert alert-dark">Elaboration de documents relatifs à la production et à la fourniture de services</summary>
+                                    <ul>
+                                        <li><a href="{% static 'ressources/btssio/stage/1/user_guide.pdf' %}" target="_blank">Guide d'utilisation d'une application </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                        <li><a href="{% static 'ressources/btssio/stage/1/Dossier_technique_stage1.pdf' %}" target="_blank">Dossier technique de programmation </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary class="alert alert-dark">Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode</summary>
+                                    <ul>
+                                        <li><a href="/veille/eth">Veille sur Ethereum</a></li>
+                                        <li><a href="/veille/ci">Veille sur l'intégration continue</a></li>
+                                        <li><a href="{% static 'ressources/btssio/stage/2/diapo' %}" disabled>Éllaboration d'un diaporama de présentation de solutions</a></li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.1.1 - Analyse du cahier des charges d'un service à produire</summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.1.3 - Étude des exigences liées à la qualité attendue d'un service</summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.3.1 - Test d'intégration et d'acceptation d'un service </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.3.3 - Accompagnement de la mise en place d'un nouveau service </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.3.4 - Déploiement d'un service </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-danger">A1.4.1 - Participation à un projet </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-warning">A2.1.1 - Accompagnement des utilisateurs dans la prise en main d'un service </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-warning">A2.3.2 - Proposition d'amélioration d'un service </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.1 - Proposition d'une solution applicative </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.2 - Conception ou adaptation de l'interface utilisateur d'une solution applicative </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.3 - Conception ou adaptation d'une base de données </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.4 - Définition des caractéristiques d'une solution applicative </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.7 - Développement, utilisation ou adaptation de composants logiciels </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.8 - Réalisation des tests nécessaires à la validation d'éléments adaptés ou développés </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                    <details>
+                        <summary class="alert alert-info">A4.1.10 - Rédaction d'une documentation d'utilisation </summary>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-ppe" role="tabpanel" aria-labelledby="pills-ppe-tab">
+                <details>
+                    <summary class="alert alert-success">GSB Applifrais</summary>
+                    <ul>
+                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="blank">Installation de l'architecture 3 tiers</a></li>
+                        <li><a href="{% static 'ressources/btssio/gsb/TP_appli_compta.pdf' %}" target="blank">appliFrais (ancienne version)</a></li>
+                        <li><a href="http://arthurrhd.alwaysdata.net">Refonte d'appliFrais en MVC et PDO</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="alert alert-primary">GSB Android</summary>
+                    <ul>                        
+                        <li><a href="">Application GSB en Java</a></li>
+                    </ul>
+                </details>
+            </div>
+            <div class="tab-pane fade" id="pills-stage-1" role="tabpanel" aria-labelledby="pills-stage-1-tab">
+                <h1 class="lead">Mairie de Sotteville-Lès-Rouen</h1>
+                <p class="text-justify">Sous la tutelle de monsieur Raharison, j’ai effectué mon stage à la mairie de Sotteville-Lès-Rouen. Le but, réaliser un application web pour gérer les réservations de salle de réunion.</p>
+                <p class="text-justify">Auparavant, les réservations se faisaient au format papier. Afin de répondre à ce besoin de numérisation, il fallait mettre en place un outil simple et performant.</p>
+                <p class="text-justify">J’ai mis en place une application développée en PHP pur, qui utilise l’Active Directory de la mairie pour authentifier les utilisateurs. Cette application exploite une base de données MySQL. Pour faciliter l’expérience utilisateur et rendre l’outil le plus accessible possible, le formulaire de réservation est la copie parfaite de l’ancien formulaire papier. L’utilisation de la librairie FullCalendar fut un plus pour concevoir un calendrier simple et efficace.</p>
+                <p class="text-justify">Une documentation d’utilisation a été réalisée au format PDF et incluse dans l’application.</p>
+                <img class="img-fluid" src="{% static 'images/stage/1/calendar.png' %}" alt="calendar">
+                <h1 class="lead">Architecture réseau résumé de la Mairie</h1>
+                <img src="{% static 'images/stage/1/cisco_map.png' %}" alt="archi_mairie" class="img-fluid">
+                <hr>
+                <h1 class="lead">Stack</h1>
+                <ul>
+                    <li>Visual Studio Code (IDE)</li>
+                    <li>PHP 7.3</li>
+                    <li>MySQL</li>
+                    <li>Active Directory (LDAP)</li>
+                    <li>FullCalendar.js</li>
+                    <li>JMerise (MCD)</li>
+                </ul>
+                <h1 class="lead">Ressources</h1>
+                <ul>
+                    <li>Docummentation
+                        <ul>
+                            <li><a href="{% static 'ressources/btssio/stage/1/user_guide.pdf' %}" target="_blank">Guide d'utilisation de l'application</a></li>
+                            <li><a href="{% static 'ressources/btssio/stage/1/Dossier_technique_stage1.pdf' %}" target="_blank">Dossier technique de programmation</a></li>
+                            <li><a href="{% static 'ressources/btssio/stage/1/note_stage1.pdf' %}" target="_blank">Note de stage (4pages)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://github.com/arthuRHD/reservationSalle" target="_blank">Lien du projet sur GitHub</a></li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="pills-stage-2" role="tabpanel" aria-labelledby="pills-stage-2-tab">
+                <h1 class="lead">BudgetBox</h1>
+                <p class="text-justify">J'ai réalisé mon stage au sein du pôle Connected-Shopper de BudgetBox. Le siège de l'entreprise se situe à Saint-Etienne-du-Rouvray et le pole commercial se situe à Paris. L'activité principal de BudgetBox est d'accompagner les entreprises de la grande distribution dans leur stratégie marketing. Cela se traduit par l'analyse de données ou par la production de logiciel à destination des clients (Scanettes).</p>
+                <h1 class="lead">Ma mission de Stage</h1>
+                <p class="text-justify">Ma mission a été supervisée par le Product Owner <a href="https://fr.linkedin.com/in/juekevin">Kevin Jue</a>. Nous avons utilisé la méthode agile Kanban pour la gestion de mon projet de stage.</p>
+                <p class="text-justify">Le projet de stage consistait à automatiser les tests de non-régressions des applications mobiles de BudgetBox. Nous nous sommes focalisés sur les applications Android pour des contraintes de temps et de matériels.</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://drive.google.com/file/d/1Jx1Vjvc9A326E3PCgvMWrE5dcZUbKy2q/preview" allowfullscreen></iframe>
+                </div>
+                <h1 class="lead">Kanban</h1>
+                <p class="text-justify">La méthode Kanban utilisée pour la gestion de projet de ce stage. Je trouve cette méthode très simple et rapide à mettre en place</p>
+                <img class="img-fluid" src="{% static 'images/stage/2/gitlab-board.png' %}" alt="gitlab">
+                <p class="text-justify">Voici à quoi ressemble le détail d'une tâche Kanban : </p>
+                <img src="{% static 'images/stage/2/task_example.png' %}" alt="task" class="img-fluid">
+                <h1 class="lead">GitLab, comme serveur de versionning</h1>
+                <p class="text-justify">Cet outil nous a servi à la gestion de projet mais aussi à la gestion des versions. BudgetBox a des normes spécifiques inspirées des bonnes pratiques afin de nommer les "Commits", ils commencent tous par feat/fix/chore/docs, on indique entre parenthèses le numéro de la branche tirée qui correspond au numéro du ticket.</p>
+                <img src="{% static 'images/stage/2/versionning.png' %}" alt="versionning" class="img-fluid">
+                <p class="text-justify">Ceci est un aperçu de comment sont réalisés les tests des non-regressions</p>
+                <img class="img-fluid" src="{% static 'images/stage/2/appium.png' %}" alt="appium">
+                <p class="text-justify">Le but premier des tests des non-regressions est avant tout de relever des fonctionnalités qui ne fonctionne plus avec l'intégration de code nouveau. On peut remarquer que ces tests ont été utiles puisque de nombreux bugs ont été relevés comme celui ci sur Jira</p>
+                <img src="{% static 'images/stage/2/ticket.png' %}" alt="ticket" class="img-fluid">
+                <hr>
+                <h1 class="lead">Stack</h1>
+                <ul>
+                    <li>Visual Studio Code (IDE)</li>
+                    <li>GitHub (Outil de recherche de librairies pour python)</li>
+                    <li>Python 3.7.6</li>
+                    <li>Vysor (Permet d’émuler un écran de téléphone physique)</li>
+                    <li>Nexus 6P (Téléphone prêté par l’entreprise pour développer les tests automatisés)</li>
+                    <li>Appium Desktop (Pour inspecter les éléments internes des applications)</li>
+                    <li>GitLab (Versionning)</li>
+                </ul>
+                <h1 class="lead">Ressources</h1>
+                <ul>
+                    <li>Documentation du projet :
+                        <ul>
+                            <li><a href="{% static 'ressources/btssio/stage/2/README.pdf' %}" target="_blank">README.md</a></li>
+                            <li><a href="{% static 'ressources/btssio/stage/2/mac.pdf' %}" target="_blank">Guide d'installation pour OS X</a></li>
+                            <li><a href="{% static 'ressources/btssio/stage/2/linux.pdf' %}" target="_blank">Guide d'installation pour Linux</a></li>
+                            <li><a href="{% static 'ressources/btssio/stage/2/settings.pdf' %}" target="_blank">Configuration du projet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% static 'ressources/btssio/stage/2/documentation_installation_stage2.pdf' %}" target="_blank">Documentation d'installation de appium</a></li>
+                    <li><a href="{% static 'ressources/btssio/stage/2/note_stage2.pdf' %}" target="_blank">Note de stage (4pages)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

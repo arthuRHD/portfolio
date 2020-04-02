@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %} {% block content %}
+<div class="card shadow">
+    <div class="card-header">
+        <h3 class="card-title"><span class="badge badge-round badge-info">{{ article.theme }}</span> {{ article.title }}</h3>
+        <small class="text-muted">{{ article.date }}</small>
+    </div>
+    <div class="card-body">
+        {{ article.body|safe }}
+    </div>
+    <div class="card-footer">
+        <p class="text-monospace">Sources : <p>
+        <div class="btn-group">
+        {% for source in article.source.all %}
+            <a href="{{ source }}" class="btn btn-primary">{{ source.name }}</a>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<div id="disqus_thread"></div>
+<script id="dsq-count-scr" src="//portfolio-richardinfo-fr.disqus.com/count.js" async></script>
+{% endblock %} 
+{% block script %} 
+<script>
+    var disqus_config = function () {
+    this.page.url = 'http://portfolio.richardinfo.fr{{ request.path }}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{ article.date }}[{{ article.id }}]'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { 
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://portfolio-richardinfo-fr.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endblock script %}
