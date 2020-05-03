@@ -21,7 +21,7 @@
     <div class="card-body">
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade active show" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab">
-                <a class="btn-block btn btn-outline-dark" href="{% static 'ressources/btssio/BTS_SIO_excel_competences.pdf' %}" type="application/pdf" target="blank">Tableau des Compétences</a>
+                <a class="btn-block btn btn-outline-dark" href="{% static 'ressources/btssio/BTS_SIO_excel_competences.pdf' %}" type="application/pdf" target="_blank">Tableau des Compétences</a>
                 <br>
                 <a class="btn btn-primary btn sm" data-toggle="collapse" href="#skill" role="button" aria-expanded="false" aria-controls="collapseExample">⇵</a><span class="text-monospace"> Justification des compétences</span>
                 <hr>
@@ -31,32 +31,39 @@
                         <ul style="list-style: none;">
                             <li>
                                 <details>
-                                    <summary class="alert alert-dark">Participation à un projet d’évolution d’un SI (solution applicative)</summary>
-                                    <p>J'ai eu la chance de participer à l'évolution d'un service informatique au cours de mes deux stages. (voir la section Stage de première année et de deuxième année)</p>
-                                </details>
-                            </li>
-                            <li>
-                                <details>
-                                    <summary class="alert alert-dark">Prise en charge d’incidents et de demandes d’assistance liés au domaine de spécialité du candidat </summary>
-                                    <p><a href="{% static 'ressources/btssio/skills/glpi.pdf' %}" target="_blank">Compte-rendu d'installation du service GLPI et de OCS Inventory</a></p>
-                                </details>
-                            </li>
-                            <li>
-                                <details>
-                                    <summary class="alert alert-dark">Elaboration de documents relatifs à la production et à la fourniture de services</summary>
+                                    <summary class="alert alert-light">Participation à un projet d’évolution d’un SI (solution applicative)</summary>
                                     <ul>
-                                        <li><a href="{% static 'ressources/btssio/stage/1/user_guide.pdf' %}" target="_blank">Guide d'utilisation d'une application </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
-                                        <li><a href="{% static 'ressources/btssio/stage/1/Dossier_technique_stage1.pdf' %}" target="_blank">Dossier technique de programmation </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                        <li>Numérisation du formulaire de réservation de salle <div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                        <li>Automatisation des tests de non-regression des plusieurs applications mobiles <div class="badge badge-pill badge-warning">Stage 2</div></li>
+                                        <li>Amélioration de l'application de gestion de frais <div class="badge badge-pill badge-danger">PPE</div></li>
                                     </ul>
                                 </details>
                             </li>
                             <li>
                                 <details>
-                                    <summary class="alert alert-dark">Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode</summary>
+                                    <summary class="alert alert-light">Prise en charge d’incidents et de demandes d’assistance liés au domaine de spécialité du candidat </summary>
+                                    <p><a href="{% static 'ressources/btssio/skills/glpi.pdf' %}" target="_blank">Compte-rendu d'installation du service GLPI et de OCS Inventory</a></p>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary class="alert alert-light">Elaboration de documents relatifs à la production et à la fourniture de services</summary>
+                                    <ul>
+                                        <li><a href="{% static 'ressources/btssio/stage/1/user_guide.pdf' %}" target="_blank">Guide d'utilisation de l'application </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                        <li><a href="{% static 'ressources/btssio/stage/1/Dossier_technique_stage1.pdf' %}" target="_blank">Dossier technique de programmation </a><div class="badge badge-pill badge-primary">Stage 1</div></li>
+                                        <li><a href="{% static 'ressources/btssio/stage/2/README.pdf' %}" target="_blank">Documentation technique du programme de test </a><div class="badge badge-pill badge-warning">Stage 2</div></li>
+                                        <li><a href="{% static 'ressources/btssio/gsb/appliGSB.pdf' %}" target="_blank">Compte-rendu de l'application windows GSB </a><div class="badge badge-pill badge-danger">PPE</div></li>
+                                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="_blank">Guide d'installation et de configuration d'une architecture 3 tiers </a><div class="badge badge-pill badge-danger">PPE</div></li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary class="alert alert-light">Productions relatives à la mise en place d’un dispositif de veille technologique et à l’étude d’une technologie, d’un composant, d’un outil ou d’une méthode</summary>
                                     <ul>
                                         <li><a href="/veille/eth">Veille sur Ethereum</a></li>
                                         <li><a href="/veille/ci">Veille sur l'intégration continue</a></li>
-                                        <li><a href="{% static 'ressources/btssio/stage/2/diapo' %}" disabled>Éllaboration d'un diaporama de présentation de solutions</a></li>
+                                        <li><a href="" target="_blank">Recherche d'une technologie répondant à mon besoin (TODO) </a><div class="badge badge-pill badge-warning">Stage 2</div></li>
                                     </ul>
                                 </details>
                             </li>
@@ -72,7 +79,10 @@
                     </details>
                     <details>
                         <summary class="alert alert-danger">A1.3.1 - Test d'intégration et d'acceptation d'un service </summary>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                        <ul>
+                            <li><a href="{% static 'ressources/btssio/stage/2/linux.pdf' %}">Installation du programme sous Linux </a><div class="badge badge-pill badge-warning">Stage 2</div></li>
+                            <li><a href="{% static 'ressources/btssio/stage/2/mac.pdf' %}">Installation du programme sous OS X</a><div class="badge badge-pill badge-warning">Stage 2</div></li>
+                        </ul>
                     </details>
                     <details>
                         <summary class="alert alert-danger">A1.3.3 - Accompagnement de la mise en place d'un nouveau service </summary>
@@ -84,7 +94,14 @@
                     </details>
                     <details>
                         <summary class="alert alert-danger">A1.4.1 - Participation à un projet </summary>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
+                        <ul>
+                            <li>Numérisation du formulaire de réservation de salle <div class="badge badge-pill badge-primary">Stage 1</div></li>
+                            <li>Automatisation des tests de non-regression des plusieurs applications mobiles <div class="badge badge-pill badge-warning">Stage 2</div></li>
+                            <li>Amélioration de l'application de gestion de frais <div class="badge badge-pill badge-danger">PPE</div></li>
+                            <li>Développement de l'application de suivi de comptes rendus <div class="badge badge-pill badge-danger">PPE</div></li>
+                            <li>Développement de l'application mobile GSB <div class="badge badge-pill badge-danger">PPE</div></li>
+                            <li><a href="https://github.com/arthuRHD/BatteryManager" target="_blank">Application de gestion optimale de batterie </a><div class="badge badge-pill badge-dark">Personnel</div></li>
+                        </ul>
                     </details>
                     <details>
                         <summary class="alert alert-warning">A2.1.1 - Accompagnement des utilisateurs dans la prise en main d'un service </summary>
@@ -122,21 +139,39 @@
                         <summary class="alert alert-info">A4.1.10 - Rédaction d'une documentation d'utilisation </summary>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iure culpa illum reprehenderit. Laborum architecto vitae debitis dolore nihil numquam incidunt, est, iusto qui, enim sapiente eos ea excepturi! Atque.</p>
                     </details>
+                    <details>
+                        <summary style="background-color: lightgreen;" class="alert alert-dark">A5.1.1 - Mise en place d'une gestion de configuration</summary>
+                        <ul>
+                            <li><a href="{% static 'ressources/btssio/stage/2/settings.pdf' %}" target="_blank">Configuration du programme de test </a><div class="badge badge-pill badge-warning">Stage 2</div></li>
+                            <li><a href="{% static 'ressources/btssio/stage/2/param.pdf' %}" target="_blank">Paramètres en entrée du programme de test (TODO) </a><div class="badge badge-pill badge-warning">Stage 2</div></li>                            
+                        </ul>                        
+                    </details>
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-ppe" role="tabpanel" aria-labelledby="pills-ppe-tab">
                 <details>
-                    <summary class="alert alert-success">GSB Applifrais</summary>
+                    <summary class="alert alert-warning">GSB Applifrais <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
                     <ul>
-                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="blank">Installation de l'architecture 3 tiers</a></li>
-                        <li><a href="{% static 'ressources/btssio/gsb/TP_appli_compta.pdf' %}" target="blank">appliFrais (ancienne version)</a></li>
-                        <li><a href="http://arthurrhd.alwaysdata.net">Refonte d'appliFrais en MVC et PDO</a></li>
+                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="_blank">Installation de l'architecture 3 tiers</a></li>
+                        <li><a href="{% static 'ressources/btssio/gsb/TP_appli_compta.pdf' %}" target="_blank">appliFrais (ancienne version)</a></li>
+                        <li><a href="" target="_blank">Refonte d'appliFrais en MVC et PDO (TODO)</a></li>
+                        <li><a href="https://github.com/arthuRHD/appliFrais" target="_blank">Aperçu du code source</a></li>
+                        <li><a href="http://applifrais.richardinfo.fr" target="_blank">Démo de l'application</a></li>
                     </ul>
                 </details>
                 <details>
-                    <summary class="alert alert-primary">GSB Android</summary>
+                    <summary class="alert alert-success">GSB Android  <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
                     <ul>                        
                         <li><a href="">Application GSB en Java</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="alert alert-info">GSB Windows  <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
+                    <ul>
+                        <li><a href="{% static 'ressources/btssio/gsb/appliGSB.pdf' %}" target="_blank">AppliGSB réalisée en C#</a></li>
+                        <li><a href="{% static 'ressources/btssio/gsb/mcd_modifie.pdf' %}" target="_blank">MCD modifié</a></li>
+                        <li><a href="https://github.com/arthuRHD/AppliGSB/releases" target="_blank">Lien du téléchargement de l'application</a></li>
+                        <li><a href="https://github.com/arthuRHD/AppliGSB">Aperçu du code source</a></li>
                     </ul>
                 </details>
             </div>

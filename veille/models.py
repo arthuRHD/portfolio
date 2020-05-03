@@ -33,4 +33,4 @@ class Article(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['title']
+        ordering = ['-date']

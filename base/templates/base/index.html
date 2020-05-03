@@ -23,20 +23,22 @@
   </ul>
 {% endif %}
 <div class="row row-cols-3 row-cols-md-1">
+  <div class="card-columns">
     {% for article in articles %}
 
-      <div class="col mb-4">
-        <div class="card shadow">
+      
+        <div class="card bg-dark shadow">
             <img style="width: 100%" src="{{article.thumbnail.url}}" class="card-img-top" alt="{{article.title}}">
-            <div class="card-body">
-                <p class="card-text"><small class="text-muted">{{article.date}}</small> <span class="badge badge-pill badge-warning">{{article.theme}}</span></p> 
-                <h5 class="card-title">{{article.title}}</h5>
+            <div class="card-body text-light">
+                <p class="card-text"><small class="text-primary">{{article.date}}</small> <span class="badge badge-pill {% if article.theme.id == 4 %} badge-danger {% elif article.theme.id == 1 %} badge-info {% else %} badge-warning {% endif %}">{{article.theme}}</span></p> 
+                <h5 class="card-title text-monospace lead">{{article.title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{article.desc}}</h6>
                 <a class="card-link btn btn-sm btn-success" href="/veille/{{article.id}}">En savoir plus</a>
             </div>
         </div>
-    </div>
+    
   {% endfor %}
+</div>
       </div>
 
 {% endblock content %}
