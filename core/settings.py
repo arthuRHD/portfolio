@@ -21,10 +21,7 @@ ALLOWED_HOSTS = prod.ALLOWED_HOSTS
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'yb&)xnt!nb)@66-t)_bxmq8rk=l+2un)$c#s9)=jgrcs)mwq_-'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = prod.SECRET_KEY
 
 # Application definition
 
