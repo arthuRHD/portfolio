@@ -2,8 +2,9 @@
 > Made with Django Framework, MySQL, Cloudflare and hosted on my raspberrypi
 You can actually see the portfolio here : [portfolio.richardinfo.fr](http://portfolio.richardinfo.fr)
 
+![Django CI](https://github.com/arthuRHD/core/workflows/Django%20CI/badge.svg)
+
 ## Domain names
-- `www.richardinfo.fr` is the main site
 - `portfolio.richardinfo.fr` is my portfolio
 - `applifrais.richardinfo.fr` is hosting a school project
 - `docs.richardinfo.fr` contains every documentation i've wrote
