@@ -7,7 +7,7 @@ MYSQL_PORT = '3306'
 
 ELASTICSEARCH_HOST = 'localhost:9200'
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*"]
 SECRET_KEY = 'yb&)xnt!nb)@66-t)_bxmq8rk=l+2un)$c#s9)=jgrcs)mwq_-'
 
 STATIC_URL = "/static/"
