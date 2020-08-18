@@ -1,74 +1,214 @@
 {% extends 'base/base.html' %} {% load static %} {% block content %}
 <div class="row">
+  <article class="col-lg-7 col-md-7 col-sm-12 col-xs-12 maincontent">
+    <header class="page-header">
+      <h1 class="display-4 page-title">À propos de moi</h1>
+      <br />
+    </header>
+    <div class="media">
+      <img
+        src="https://avatars3.githubusercontent.com/u/48015496?s=460&u=2fbc1d43a5eb5e20e08cc67795230a806815db15&v=4"
+        class="mr-4 img-fluid p-3 w-25 h-25 rounded float-left"
+        alt="Arthur richard"
+      />
+      <div class="media-body">
+        <blockquote>
+          <h3>Arthur RICHARD</h3>
+          Rouen | 20 ans <br />
+          <br />
+        </blockquote>
+      </div>
+    </div>
+    <h3>Mon parcours scolaire</h3>
+    <p class="text-justify">
+      Après l'obtention de mon
+      <span class="text-primary"
+        >Baccalauréat scientifique spécialité sciences de l'ingénieur</span
+      >, j'ai décidé de suivre une
+      <span class="text-primary">Licence PMPC</span> (Physique, Mécanique,
+      Physique-chimie) à l'
+      <span class="text-muted">UFR de Sciences de Rouen</span>. La
+      physique-chimie est un domaine qui me passionne, néanmoins après quelques
+      mois au sein de cette formation j'ai décidé de me réorienter dans un
+      <span class="text-primary">BTS SIO</span> après mûres réflections ne
+      voyant pas de perspectives d'avenir dans la Physique-Chimie me concernant.
+    </p>
+    <p class="text-justify">
+      le BTS SIO m'apporte beaucoup de compétences de part les expériences
+      professionnelles mais aussi avec les nouvelles notions abordées en cours.
+      J'ai décidé de prendre la spécialité SLAM (Solutions Logicielles et
+      Applications Métier) car je trouve la conception d'application
+      passionnante et la programmation ne m'ai pas étrangère tenant compte de
+      mon bagage scientifique
+    </p>
+    <h3>Mes passions</h3>
+    <p class="text-justify">
+      Ma curiosité scientifique me pousse souvent à me renseigner sur les
+      dernières découvertes en tout genre. J'apprecie expérimenter des
+      innovations technologiques et le DIY. C'est pour cela que je possède un
+      Raspberry PI puisque cela me permet de me cultiver dans le domaine de
+      l'électricité, de la mécanique, de l'informatique ainsi qu'exercer ma
+      créativité en réalisant divers projets.
+    </p>
+    <h3>Mes objectifs</h3>
+    <p class="text-justify">
+      Mon but actuel est d'apprendre le plus de concepts et de technologies pour
+      parfaire mes compétences et me vendre sur le marché du travail.
+    </p>
+    <p class="text-justify">
+      À l'avenir, j'aimerai mettre à contribution ma créativité au sein d'un
+      projet qui a du sens. L'informatique étant un secteur innovant, je
+      voudrais faire partie intégrante de cette innovation.
+    </p>
+  </article>
 
-    <article class="col-lg-7 col-md-7 col-sm-12 col-xs-12 maincontent">
-        <header class="page-header">
-            <h1 class="display-4 page-title">À propos de moi</h1> <br>
-        </header>
-        <div class="media">
-            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFQmdUmcswu4g/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=GudHJ_lXRYtqcOSuJ8c0ulevFyFF2BQMXVYcDfANS2A"
-                class="mr-4 img-fluid p-3 w-25 h-25 rounded float-left" alt="Arthur richard">
-            <div class="media-body">
-                <blockquote>
-                    <h3>Arthur RICHARD</h3>
-                    Rouen | 20 ans <br> <br>
-                </blockquote>
-            </div>
+  <aside class="col-lg-5 col-md-5 col-sm-12 col-xs-12 sidebar sidebar-right">
+    <div class="widget">
+      <div class="card border-primary text-center shadow">
+        <div class="card-body">
+          <h4 class="card-title text-primary">Statut actuel</h4>
+          <p class="text-monospace text-center lead">
+            Étudiant en informatique
+          </p>
+          <p class="text-muted">
+            Actuellement en dernière année de BTS SIO Option SLAM (Solutions
+            Logicielles Applications Métiers).
+          </p>
+          <p>
+            Je suis intéressé par tout type de projet dans le domaine du web, du
+            développement mobile, application client/serveur ou autre.
+          </p>
+          <a
+            class="btn btn-primary btn-sm"
+            href="{% static 'ressources/pro/cv.pdf' %}"
+            target="_blank"
+            >CV</a
+          >
+          <a
+            class="btn btn-secondary btn-sm"
+            href="{% static 'ressources/pro/motiv.pdf' %}"
+            target="_blank"
+            >Lettre de motivation</a
+          >
         </div>
-        <h3>Mon parcours scolaire</h3>
-        <p class="text-justify">Après l'obtention de mon <span class="text-primary">Baccalauréat scientifique spécialité sciences de l'ingénieur</span>, j'ai décidé de suivre une <span class="text-primary">Licence PMPC</span> (Physique, Mécanique, Physique-chimie) à l'
-            <span class="text-muted">UFR de Sciences de Rouen</span>. La physique-chimie est un domaine qui me passionne, néanmoins après quelques mois au sein de cette formation j'ai décidé de me réorienter dans un <span class="text-primary">BTS SIO</span>            après mûres réflections ne voyant pas de perspectives d'avenir dans la Physique-Chimie me concernant. </p>
-        <p class="text-justify">le BTS SIO m'apporte beaucoup de compétences de part les expériences professionnelles mais aussi avec les nouvelles notions abordées en cours. J'ai décidé de prendre la spécialité SLAM (Solutions Logicielles et Applications Métier) car je trouve
-            la conception d'application passionnante et la programmation ne m'ai pas étrangère tenant compte de mon bagage scientifique</p>
-        <h3>Mes passions</h3>
-        <p class="text-justify">Ma curiosité scientifique me pousse souvent à me renseigner sur les dernières découvertes en tout genre. J'apprecie expérimenter des innovations technologiques et le DIY. C'est pour cela que je possède un Raspberry PI puisque cela me permet de
-            me cultiver dans le domaine de l'électricité, de la mécanique, de l'informatique ainsi qu'exercer ma créativité en réalisant divers projets.</p>
-        <h3>Mes objectifs</h3>
-        <p class="text-justify">Mon but actuel est d'apprendre le plus de concepts et de technologies pour parfaire mes compétences et me vendre sur le marché du travail.</p>
-        <p class="text-justify">À l'avenir, j'aimerai mettre à contribution ma créativité au sein d'un projet qui a du sens. L'informatique étant un secteur innovant, je voudrais faire partie intégrante de cette innovation.</p>
+      </div>
+      <br />
 
-    </article>
-
-    <aside class="col-lg-5 col-md-5 col-sm-12 col-xs-12 sidebar sidebar-right">
-
-        <div class="widget">
-            <div class="card border-primary text-center shadow ">
-                <div class="card-body">
-                    <h4 class="card-title text-primary">Statut actuel</h4>
-                    <p class="text-monospace text-center lead">Étudiant en informatique</p>
-                    <p class="text-muted">Actuellement en dernière année de BTS SIO Option SLAM (Solutions Logicielles Applications Métiers).</p>
-                    <p>Je suis intéressé par tout type de projet dans le domaine du web, du développement mobile, application client/serveur ou autre.</p>
-                    <a class="btn btn-primary btn-sm" href="{% static 'ressources/pro/cv.pdf' %}" target="_blank">CV</a>
-                    <a class="btn btn-secondary btn-sm" href="{% static 'ressources/pro/motiv.pdf' %}" target="_blank">Lettre de motivation</a>
-                </div>
-            </div>
-            <br>
-
-            <div class="card border-dark text-center shadow">
-                <div class="card-body" style="padding-bottom: 5px;">
-                    <h4 class="card-title text-center">Mes projets</h4>
-                    <ul style="list-style:none;padding: 0%;">
-                        <li><a class="btn btn-dark btn-block" href="https://github.com/arthuRHD/BatteryManager">BatteryManager <span style="background-color: purple;" class="badge badge-pill">C#</span> <span class="badge badge-pill badge-light">.NET Framework</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-dark btn-block" href="https://github.com/arthuRHD/reservationSalle">reservationSalle <span style="background-color: purple;" class="badge badge-pill">Bootstrap</span> <span class="badge badge-primary badge-pill">CSS</span> <span class="badge badge-warning badge-pill">JQuery</span> <span class="badge badge-pill badge-info">php7</span> <span class="badge badge-pill badge-light">MySQL</span> <span class="badge badge-pill badge-light">fullcalendar.js</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-dark btn-block" href="https://github.com/arthuRHD/appliFrais">appliFrais <span style="background-color: purple;" class="badge badge-pill">Bootstrap</span> <span class="badge badge-pill badge-info">php7</span> <span class="badge badge-pill badge-light">MySQL</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-dark btn-block" href="https://github.com/arthuRHD/blockchain">Générateur de blockchain <span class="badge badge-pill badge-success">Python3</span> <span class="badge badge-pill badge-light">hashlib</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-dark btn-block" href="https://github.com/arthuRHD/core">Portfolio <span class="badge badge-pill badge-success">Django</span> <span style="background-color: purple;" class="badge badge-pill">Bootstrap</span> <span class="badge badge-pill badge-light">sqlite3</span> <span class="badge badge-pill badge-light">GitHub Actions</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-secondary btn-block" href="">Bloqueur de pub au niveau DNS <span class="badge badge-pill badge-danger">Angular</span> <span style="background-color: purple;" class="badge badge-pill">Bootstrap</span> <span class="badge badge-pill badge-warning">Node.js</span> <span class="badge badge-pill badge-light">piHole</span></a></li>
-                        <hr style="margin: 5px;">
-                        <li><a class="btn btn-secondary btn-block" href="">Tableau de bord d'un potager autonome <span class="badge badge-pill badge-primary">React</span> <span style="background-color: purple;" class="badge badge-pill">Bootstrap</span> <span class="badge badge-pill badge-light">raspberry.GPIO</span> <span class="badge badge-pill badge-warning">Node.js</span> <span class="badge badge-pill badge-success">MangoDB</span></a></li>
-                    </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <span class="badge badge-pill badge-secondary">En Cours</span> <span class="badge badge-pill badge-dark">Terminé</span>
-                </div>
-            </div>
+      <div class="card border-dark text-center shadow">
+        <div class="card-body" style="padding-bottom: 5px;">
+          <h4 class="card-title text-center">Mes projets</h4>
+          <ul style="list-style: none; padding: 0%;">
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/moneytoring"
+                >moneytoring
+                <span class="badge badge-pill badge-success">Python3</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/BatteryManager"
+                >BatteryManager
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >C#</span
+                >
+                <span class="badge badge-pill badge-light"
+                  >.NET Framework</span
+                ></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/reservationSalle"
+                >reservationSalle
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >Bootstrap</span
+                >
+                <span class="badge badge-primary badge-pill">CSS</span>
+                <span class="badge badge-warning badge-pill">JQuery</span>
+                <span class="badge badge-pill badge-info">php7</span>
+                <span class="badge badge-pill badge-light">MySQL</span>
+                <span class="badge badge-pill badge-light"
+                  >fullcalendar.js</span
+                ></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/appliFrais"
+                >appliFrais
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >Bootstrap</span
+                >
+                <span class="badge badge-pill badge-info">php7</span>
+                <span class="badge badge-pill badge-light">MySQL</span></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/blockchain"
+                >Générateur de blockchain
+                <span class="badge badge-pill badge-success">Python3</span>
+                <span class="badge badge-pill badge-light">hashlib</span></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a
+                class="btn btn-dark btn-block"
+                href="https://github.com/arthuRHD/core"
+                >Portfolio
+                <span class="badge badge-pill badge-success">Django</span>
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >Bootstrap</span
+                >
+                <span class="badge badge-pill badge-light">sqlite3</span>
+                <span class="badge badge-pill badge-light"
+                  >GitHub Actions</span
+                ></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a class="btn btn-secondary btn-block" href=""
+                >Bloqueur de pub au niveau DNS
+                <span class="badge badge-pill badge-danger">Angular</span>
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >Bootstrap</span
+                >
+                <span class="badge badge-pill badge-warning">Node.js</span>
+                <span class="badge badge-pill badge-light">piHole</span></a
+              >
+            </li>
+            <hr style="margin: 5px;" />
+            <li>
+              <a class="btn btn-secondary btn-block" href=""
+                >Tableau de bord d'un potager autonome
+                <span class="badge badge-pill badge-primary">React</span>
+                <span style="background-color: purple;" class="badge badge-pill"
+                  >Bootstrap</span
+                >
+                <span class="badge badge-pill badge-light">raspberry.GPIO</span>
+                <span class="badge badge-pill badge-warning">Node.js</span>
+                <span class="badge badge-pill badge-success">MangoDB</span></a
+              >
+            </li>
+          </ul>
         </div>
-
-    </aside>
+        <div class="card-footer text-center">
+          <span class="badge badge-pill badge-secondary">En Cours</span>
+          <span class="badge badge-pill badge-dark">Terminé</span>
+        </div>
+      </div>
+    </div>
+  </aside>
 </div>
 {% endblock %}
