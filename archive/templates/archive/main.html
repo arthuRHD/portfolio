@@ -1,8 +1,8 @@
 {% extends 'base/base.html' %} {% load static %} {% block content %}
-<h1 class="display-3">Archives</h1>
+<h1 class="display-3">BTS SIO</h1>
 <br>
 <div class="card shadow">
-    <div class="card-header" style="padding: 11px;">
+    <div class="card-header bg-light" style="padding: 11px;">
         <ul id="pills-tab" class="nav nav-tabs card-header-tabs no-gutters position-sticky" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="pills-skill-tab" data-toggle="pill" href="#pills-skill" role="tab" aria-controls="pills-skill" aria-selected="true">Compétences</a>
@@ -15,6 +15,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="pills-stage-2-tab" data-toggle="pill" href="#pills-stage-2" role="tab" aria-controls="pills-stage-2" aria-selected="false">Stage de deuxième année</a>
+            </li>
+            <li class="nav-item">
+                <a href="#pills-tp" class="nav-link" data-toggle="pill" id="pills-tp-tab" role="tab" aria-controls="pills-tp" aria-selected="false">TP</a>
             </li>
         </ul>
     </div>
@@ -150,23 +153,16 @@
             </div>
             <div class="tab-pane fade" id="pills-ppe" role="tabpanel" aria-labelledby="pills-ppe-tab">
                 <details>
-                    <summary class="alert alert-warning">GSB Applifrais <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
+                    <summary class="alert alert-warning">GSB Applifrais <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/fichepro_ppe1.pdf' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
                     <ul>
-                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="_blank">Installation de l'architecture 3 tiers</a></li>
-                        <li><a href="{% static 'ressources/btssio/gsb/TP_appli_compta.pdf' %}" target="_blank">appliFrais (ancienne version)</a></li>
-                        <li><a href="" target="_blank">Refonte d'appliFrais en MVC et PDO (TODO)</a></li>
+                        <li><a href="{% static 'ressources/btssio/gsb/TP_archi_3tiers.pdf' %}" target="_blank">Installation de l'architecture 3 tiers</a></li>                        
+                        <li><a href="{% static 'ressources/btssio/gsb/cr_applifrais.pdf' %}" target="_blank">Refonte d'appliFrais en MVC et PDO</a></li>
                         <li><a href="https://github.com/arthuRHD/appliFrais" target="_blank">Aperçu du code source</a></li>
                         <li><a href="http://applifrais.richardinfo.fr" target="_blank">Démo de l'application</a></li>
                     </ul>
                 </details>
                 <details>
-                    <summary class="alert alert-success">GSB Android  <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
-                    <ul>                        
-                        <li><a href="">Application GSB en Java</a></li>
-                    </ul>
-                </details>
-                <details>
-                    <summary class="alert alert-info">GSB Windows  <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
+                    <summary class="alert alert-info">AppliGSB  <span class="badge badge-light"><a href="{% static 'ressources/btssio/gsb/' %}" target="_blank" rel="noopener noreferrer">Fiche de situation professionnelle</a></span></summary>
                     <ul>
                         <li><a href="{% static 'ressources/btssio/gsb/appliGSB.pdf' %}" target="_blank">AppliGSB réalisée en C#</a></li>
                         <li><a href="{% static 'ressources/btssio/gsb/mcd_modifie.pdf' %}" target="_blank">MCD modifié</a></li>
@@ -251,6 +247,37 @@
                     <li><a href="{% static 'ressources/btssio/stage/2/documentation_installation_stage2.pdf' %}" target="_blank">Documentation d'installation de appium</a></li>
                     <li><a href="{% static 'ressources/btssio/stage/2/note_stage2.pdf' %}" target="_blank">Note de stage (4pages)</a></li>
                 </ul>
+            </div>
+            <div class="tab-pane fade" id="pills-tp" role="tabpanel" aria-labelledby="pills-tp-tab">
+                <details>
+                    <summary class="alert alert-success">SLAM3</summary>
+                    <ul>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/norma.pdf" %}">Normalisation <span class="badge badge-pill badge-secondary">SQL</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/procedures.pdf" %}">Procédures stockées et déclencheurs <span class="badge badge-pill badge-secondary">SQL</span></a></li>
+                    </ul>
+                </details>
+                <details>                    
+                    <summary class="alert alert-danger">SLAM4</summary>
+                    <ul>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/tp_cnc.pdf" %}">CNC <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET Console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/dictionnary.pdf" %}">Dictionnaires de données <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET Console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/exceptions.pdf" %}">Exceptions <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET Console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/abstract.pdf" %}">Classes abstraites <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET Console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/testunitaires.pdf" %}">Tests unitaires <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET Console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/annuaire.pdf" %}">Annuaire <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-dark">.NET console</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/mediatheque.pdf" %}">Mediathèque <span class="badge badge-pill badge-primary">C#</span> <span class="badge badge-pill badge-warning">.NET Windows Forms</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/sqlserver.pdf" %}">Introduction à SQL Server <span class="badge badge-pill badge-secondary">SQL</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/listPays.pdf" %}">Liste de pays <span class="badge badge-pill badge-danger">Java</span> <span class="badge badge-pill badge-success">Android</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/androidRestJson.pdf" %}">Application mobile GSB + Service REST JSON <span class="badge badge-pill badge-danger">Java</span> <span class="badge badge-pill badge-success">Android</span> <span class="badge badge-pill badge-info">PHP</span> <span class="badge badge-pill badge-secondary">SQL</span></a></li>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/TPentityFramework.pdf" %}">Entity Framework (ORM pour <span class="badge badge-pill badge-primary">C#</span>)</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary class="alert alert-info">SI7</summary>
+                    <ul>
+                        <li><a target="_blank" href="{% static "ressources/btssio/skills/glpi.pdf" %}">GLPI & OCS Inventory (Installation et configuration)</a></li>
+                    </ul>
+                </details>
             </div>
         </div>
     </div>

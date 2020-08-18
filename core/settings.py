@@ -55,17 +55,17 @@ CKEDITOR_UPLOAD_PATH = 'ckeditor_uploads/'
 
 DATABASES = {
     'default': {
-	 'ENGINE': 'django.db.backends.sqlite3',
-	 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#        'ENGINE': 'django.db.backends.mysql', 
-#        'NAME': prod.MYSQL_DB_NAME,
-#        'USER': prod.MYSQL_USER,
-#        'PASSWORD': prod.MYSQL_PASSWORD,
-#        'HOST': prod.MYSQL_HOST,   
-#        'PORT': prod.MYSQL_PORT,
-#        'OPTIONS': {
-#            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #        'ENGINE': 'django.db.backends.mysql',
+        #        'NAME': prod.MYSQL_DB_NAME,
+        #        'USER': prod.MYSQL_USER,
+        #        'PASSWORD': prod.MYSQL_PASSWORD,
+        #        'HOST': prod.MYSQL_HOST,
+        #        'PORT': prod.MYSQL_PORT,
+        #        'OPTIONS': {
+        #            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #        }
     }
 }
 
@@ -133,9 +133,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-STATIC_ROOT = '/srv/core/static'
+STATIC_ROOT = '/usr/src/app/static'
 STATIC_URL = prod.STATIC_URL
 
-MEDIA_ROOT = '/srv/core/media'
+MEDIA_ROOT = '/usr/src/app/media'
 MEDIA_URL = prod.MEDIA_URL
-

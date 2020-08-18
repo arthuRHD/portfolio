@@ -30,8 +30,8 @@
         <h4 class="text-monospace">Dans la pratique</h4>
         <h1 class="lead"> Ici, deux scénarios sont possibles : </h1>
         <ol>
-            <li> Le code est validé selon les critères voulus et donc prêt à passer à la phase de build</li>
-            <li> Le code contient une erreur qui est généralement retourné par le gestionnaire de version, empêchant la contribution d’accéder à la prochaine phase.</li>
+            <li> Le code est validé selon les critères voulus (lint, tests unitaires, ...) et donc prêt à passer à la phase de déploiement</li>
+            <li> Le code contient une erreur qui est généralement retourné par le gestionnaire de version lors du build, empêchant la contribution d’accéder à la prochaine phase.</li>
         </ol>
         <img src="{% static 'images/ci_schema.png' %}" class="img-fluid" alt="Responsive image">
     </div>
@@ -42,7 +42,50 @@
         <p class="text-justify">Certes, la mise en place de cette architecture prend du temps, mais c’est un sacrifice nécessaire afin de suivre les bonnes pratiques et de profiter des avantages au long terme de l’Intégration Continue. Enfin, plus il y a de développeurs dans
             l’entreprise, plus les avantages de l’intégration continue sont notables.</p>
     </div>
-    <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">...</div>
+    <div class="tab-pane fade" id="pills-tools" role="tabpanel" aria-labelledby="pills-tools-tab">
+        <h4 class="text-monospace">Outils d'intégration continue</h4> <br>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Site officiel</th>
+                <th scope="col">Avantages</th>
+                <th scope="col">Désavantages</th>
+                <th scope="col">Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">GitHub Actions</th>
+                <td><a href="https://help.github.com/en/actions">documentaton</a></td>
+                <td class="text-success">Très facile à prendre en main, pas besoin d'installation</td>
+                <td class="text-danger">Nécéssite de d'utiliser GitHub comme dépôt de fichiers, peu personnalisable</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <th scope="row">Gitlab CI</th>
+                <td><a href="https://docs.gitlab.com/ee/ci/">documentaton</a></td>
+                <td class="text-success">Bonne interface graphique pour visualiser les tests</td>
+                <td class="text-danger">Problème de scalabilité</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <th scope="row">Jenkins</th>
+                <td><a href="https://www.jenkins.io/">Site vitrine</a></td>
+                <td class="text-success">Open-source et compatible avec tous les OS, facile à installer</td>
+                <td class="text-danger">Moins complet que les autres outils</td>
+                <td>Gratuit</td>
+              </tr>
+              <tr>
+                <th scope="row">Circle CI</th>
+                <td><a href="https://circleci.com/docs/">documentaton</a></td>
+                <td class="text-success">Privé et auto-scale, teste rapidement et très personnalisable</td>
+                <td class="text-danger">l'offre gratuite est moins bien efficace que les autres (1 job à la fois)</td>
+                <td>Freenium</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
     <div class="tab-pane fade" id="pills-veille" role="tabpanel" aria-labelledby="pills-veille-tab">
         <h4 class="text-monospace">Outils de veille utilisés</h4> <br>
         <ul class="list-group list-group-flush">
@@ -57,7 +100,9 @@
             les avantages et les inconvénients de l’Intégration continue.</p>
     </div>
     <div class="tab-pane fade" id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">
-        ...
+        <ul>
+            <li><a href="http://portfolio.richardinfo.fr/veille/7/">Test de GitHub Actions avec pythagore.py</a></li>
+        </ul>
     </div>
 </div>
 {% endblock content %}
