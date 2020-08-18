@@ -8,7 +8,7 @@
 
 ```sh
 docker pull arichard76/myportfolio:latest
-docker run --rm -d  -p 80:80/tcp portfolio:latest
+docker run --rm -d -p 80:80/tcp arichard76/myportfolio:latest
 ```
 
 Go to [localhost](http://localhost)
