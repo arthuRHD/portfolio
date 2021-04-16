@@ -4,7 +4,7 @@ colorama==0.4.3
 Django==3.1.6
 django-ckeditor==5.9.0
 django-crispy-forms==1.8.1
-django-debug-toolbar==2.2
+django-debug-toolbar==2.2.1
 django-elasticsearch-dsl==7.1.1
 django-js-asset==1.2.2
 django-referrer-policy==1.0
